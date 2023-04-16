@@ -21,5 +21,9 @@
       "scopeName": "source.dba",
       "path": "./syntaxes/darkbasic.tmLanguage.json"
     }]
-  }
+  },
+  "repository": { 
+  "type": "git", 
+  "url": "https://github.com/MrXANA91/DarkBASIC-VSCode" 
+} 
 }
