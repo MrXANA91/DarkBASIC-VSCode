@@ -1,0 +1,25 @@
+{
+  "name": "darkbasic-vscode",
+  "displayName": "DarkBASIC-VSCode",
+  "description": "DarkBASIC support in VSCode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "darkbasic",
+      "aliases": ["DarkBASIC", "darkbasic"],
+      "extensions": [".dba"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "darkbasic",
+      "scopeName": "source.dba",
+      "path": "./syntaxes/darkbasic.tmLanguage.json"
+    }]
+  }
+}
