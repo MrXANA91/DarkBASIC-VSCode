@@ -1,0 +1,25 @@
+{
+    "name": "darkbasic-debug",
+    "version": "0.0.1",
+    "publisher": "MrXANA91",
+    "engines": {
+      "vscode": "^1.47.0"
+    },
+    "categories": ["Debuggers"],
+    "contributes": {
+      "debuggers": [
+        {
+          "type": "darkbasic",
+          "label": "DarkBASIC Debug",
+          "program": "./out/debugAdapter.js",
+          "configurationAttributes": {
+            "launch": {
+              "required": [],
+              "properties": {}
+            }
+          }
+        }
+      ]
+    }
+  }
+  

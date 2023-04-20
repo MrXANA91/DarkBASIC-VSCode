@@ -20,10 +20,18 @@
       "language": "darkbasic",
       "scopeName": "source.dba",
       "path": "./syntaxes/darkbasic.tmLanguage.json"
+    }],
+    "debuggers": [{
+      "type": "darkbasic",
+      "label": "DarkBASIC Debug"
     }]
   },
+  "main": "./extension.js",
   "repository": { 
   "type": "git", 
   "url": "https://github.com/MrXANA91/DarkBASIC-VSCode" 
-} 
+  },
+  "dependencies": {
+    "vscode-debugadapter": "^1.41.0"
+  }
 }
