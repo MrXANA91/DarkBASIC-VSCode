@@ -9,7 +9,7 @@ For now, only comments and 'if' and 'for' keywords are displayed. WIP.
 
 ## Requirements
 
-No requirement
+vscode-debugadapter : version 1.41.0
 
 ## Extension Settings
 
@@ -21,7 +21,7 @@ Missing keywords highlight
 
 ## Release Notes
 
-### 0.0.1
-First version, for test purposes
+### 0.0.2
+For test purposes
 
 ---
