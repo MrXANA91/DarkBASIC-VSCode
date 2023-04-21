@@ -3,6 +3,7 @@
   "displayName": "DarkBASIC-VSCode",
   "description": "DarkBASIC support in VSCode",
   "version": "0.0.1",
+  "publisher": "MrXANA91",
   "engines": {
     "vscode": "^1.77.0"
   },
@@ -24,7 +25,13 @@
     "debuggers": [{
       "type": "darkbasic",
       "label": "DarkBASIC Debug"
-    }]
+    }],
+    "commands": [
+      {
+        "command": "darkbasic.generateConfigFiles",
+        "title": "Generate DarkBASIC Configuration Files"
+      }
+    ]
   },
   "main": "./extension.js",
   "repository": { 
