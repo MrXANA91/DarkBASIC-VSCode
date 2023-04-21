@@ -22,6 +22,7 @@ function activate(context) {
         return;
       }
 
+      // DarkBASIC compiler executable
       vscode.window.showInformationMessage('Please select the DarkBASIC compiler EXE file.');
       const selectedWorkspaceFolder = workspaceFolders[0].uri.fsPath;
       const dbCompiler = await vscode.window.showOpenDialog({
@@ -41,8 +42,10 @@ function activate(context) {
       const dbCompilerPathUnfixed = dbCompiler[0].fsPath;
       const dbCompilerPath = dbCompilerPathUnfixed.replace(/\\/g, '\\\\');
 
+      // Default main DBA file to compile
+      vscode.window.showInformationMessage("Please select the main source file (Press 'cancel' to execute opened file each time).");
       const dbaFile = await vscode.window.showOpenDialog({
-        title: "Please select the main source file (Press 'cancel' to execute opened file each time)",
+        title: "Please select the main source file",
         canSelectFiles: true,
         canSelectFolders: false,
         canSelectMany: false,
@@ -113,10 +116,10 @@ function activate(context) {
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Compile and Execute then Display Log",
+      "name": "DarkBASIC execution",
       "type": "darkbasic",
       "request": "launch",
-      "preLaunchTask": "Compile and Execute then Display Log"
+      "preLaunchTask": "Compile and Execute"
     }
   ]
 }`;
@@ -138,7 +141,7 @@ function activate(context) {
   vscode.debug.onDidTerminateDebugSession(async (session) => {
     if (session.type === 'darkbasic') {
       const debugConfiguration = session.configuration;
-      if (debugConfiguration.preLaunchTask === 'Compile and Execute') {
+      if (debugConfiguration.preLaunchTask === 'Compile and Execute then Display Log') {
         vscode.commands.executeCommand('workbench.action.debug.stop');
       }
     }

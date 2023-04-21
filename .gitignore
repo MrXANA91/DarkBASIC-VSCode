@@ -1,2 +1,4 @@
 node_modules
 *.vsix
+*.log
+vsc-extension-quickstart.md
