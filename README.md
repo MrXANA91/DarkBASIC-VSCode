@@ -25,8 +25,9 @@ You will be able to compile your code using <code>Ctrl+Shift+B</code> and/or dir
 
 ## Known Issues
 
-Missing keywords highlight<br/>
-Not tested with DarkBASICPro, only classic
+- Missing keywords highlight<br/>
+- Debug session won't stop automatically after exiting the executable
+- Not working with DarkBASIC Pro (only tested with DarkBASIC Classic v1.09B)
 
 ## Release Notes
 
